@@ -1,5 +1,5 @@
 @echo off
-echo Checking if script contains Administrative rights...
+echo Checking if script contains Administrative rights..
 net sessions
 if %errorlevel%==0 (
 echo Success!
