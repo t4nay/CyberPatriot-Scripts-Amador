@@ -77,6 +77,14 @@ goto:EOF
 echo Setting auditing success and failure for all categories
 auditpol /set /category:* /success:enable
 auditpol /set /category:* /failure:enable
+auditpol /set /category:"Account Logon" /Success:enable /failure:enable >nul
+auditpol /set /category:"Logon/Logoff" /Success:enable /failure:enable >nul
+auditpol /set /category:"Account Management" /Success:enable /failure:enable >nul
+Auditpol /set /category:"DS Access" /failure:enable >nul
+Auditpol /set /category:"Object Access" /failure:enable >nul
+Auditpol /set /category:"policy change" /Success:enable /failure:enable >nul
+Auditpol /set /category:"Privilege use" /Success:enable /failure:enable >nul
+Auditpol /set /category:"System" /failure:enable >nul
 echo Set auditing success and failure
 goto:EOF
 
