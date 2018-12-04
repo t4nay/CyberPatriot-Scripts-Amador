@@ -57,15 +57,7 @@ goto:EOF
 
 :lsp
 echo Setting password policy...
-::Set account lockout to 5, min length to 8, max age to 30, min age to 1, and history to 5
-	net accounts /minpwlen:10
-	net accounts /maxpwage:60
-	net accounts /minpwage:10
-net accounts /uniquepw:3
-
-	net accounts /lockoutduration:30
-	net accounts /lockoutthreshold:3
-net accounts /lockoutwindow:30
+net accounts /FORCELOGOFF:30 /MINPWLEN:8 /MAXPWAGE:30 /MINPWAGE:10 /UNIQUEPW:5 /LOCKOUTDURATION:30 /LOCKOUTTHRESHOLD:5 /LOCKOUTWINDOW:30
 echo Set password policy: Password policy must meet complexity to enable
 echo Set password policy: Store passwords using reversible encryption to disabled
 echo Secpol.msc will be started for manual process
@@ -413,15 +405,7 @@ attrib -r -s C:\WINDOWS\system32\drivers\etc\hosts
 echo > C:\Windows\System32\drivers\etc\hosts
 attrib +r +s C:\WINDOWS\system32\drivers\etc\hosts
 echo Setting password policy...
-::Set account lockout to 5, min length to 8, max age to 30, min age to 1, and history to 5
-	net accounts /minpwlen:10
-	net accounts /maxpwage:60
-	net accounts /minpwage:10
-net accounts /uniquepw:3
-
-	net accounts /lockoutduration:30
-	net accounts /lockoutthreshold:3
-net accounts /lockoutwindow:30
+net accounts /FORCELOGOFF:30 /MINPWLEN:8 /MAXPWAGE:30 /MINPWAGE:10 /UNIQUEPW:5 /LOCKOUTDURATION:30 /LOCKOUTTHRESHOLD:5 /LOCKOUTWINDOW:30
 echo Set password policy: Password policy must meet complexity to enable
 echo Set password policy: Store passwords using reversible encryption to disabled
 
